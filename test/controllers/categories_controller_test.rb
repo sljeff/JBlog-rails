@@ -1,24 +1,14 @@
 require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
-  test "should get show" do
-    get categories_show_url
-    assert_response :success
+  test "should get 404 when category name not exists" do
+    get '/c/not_exists_name'
+    assert_response 404
   end
 
-  test "should get create" do
-    get categories_create_url
-    assert_response :success
+  test "should get OK when category name exists" do
+    get '/c/computer'
+    assert_response 200
+    assert_template 'categories/show'
   end
-
-  test "should get destory" do
-    get categories_destory_url
-    assert_response :success
-  end
-
-  test "should get update" do
-    get categories_update_url
-    assert_response :success
-  end
-
 end

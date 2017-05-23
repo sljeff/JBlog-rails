@@ -6,4 +6,8 @@ class TimesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # test "should not get any article in wrong tme" do
+    # get '/t/20150102-20150101'
+    
+  # end
 end

@@ -1,7 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  slug: history
+  name: 历史
 
 two:
-  name: MyString
+  slug: os
+  name: 操作系统
