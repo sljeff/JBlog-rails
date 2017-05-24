@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JBlogRails</title>
+    <title><%= yield :title %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="typo">
+    <div id="firstDiv">
+    <%= iamge_tag 'headpic.jpg', id: "headPic" %>
+    <div id="blogName"><%= link_to '/', ApplicationHelper::BlogName %></a></div>
+    <div id="fAdd1"></div>
+    <div id="fAdd2"></div>
+    <div id="cat">
+        <div class="categoryTitle">分类</div>
+        <div class="list">
+            <% for cat in @@categories %>
+                <%= link_to cat.name, category_path(cat) %>
+            <% end %>
+        </div>
+    </div>
+    <div id="date">
+        <% if defined? @dates %>
+        <div class="categoryTitle">日期归档</div>
+        <div class="list">
+            <% for date in @dates %>
+                <% link_to date, time_path(date) %>
+            <% end %>
+        </div>
+        <% end %>
+    </div>
+    <div id="fAdd3"></div>
+    <div id="fAdd4"></div>
+    <div id="fAdd5"></div>
+</div>
+<div id="lastDiv">
     <%= yield %>
+    <div id="lAdd1"></div>
+    <div id="lAdd2"></div>
+    <div id="lAdd3"></div>
+    <div id="lAdd4"></div>
+</div>
+<div id="mainAdd1"></div>
+<div id="mainAdd2"></div>
+<div id="mainAdd3"></div>
+<div id="mainAdd4"></div>
+
   </body>
 </html>

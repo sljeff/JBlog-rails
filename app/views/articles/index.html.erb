@@ -1,0 +1,17 @@
+<% content_for :title, get_title(@title||=nil) %>
+<div id="archives">
+    <div id="article">
+        <% for article in @articles %>
+        <div>
+            <h1 class="overviewTitle"><%= link_to article.title, article_path(article) %></h1>
+            <div class="overviewContent"><%= raw overview(article.html_content) %></div>
+        </div>
+        <% end %>
+    </div>
+    <% if not (@preLink||=nil).blank? %>
+        <%= link_to '上一页', @preLink, id: 'prePage' %>
+    <% end %>
+    <% if not (@nextLink||=nil).blank? %>
+        <%= link_to '下一页', @nextLink, id: 'nextPage' %>
+    <% end %>
+</div>
