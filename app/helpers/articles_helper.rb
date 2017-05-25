@@ -6,5 +6,6 @@ module ArticlesHelper
       content
     else
       content[0...index_of_p+backslash_p.length]
+    end
   end
 end

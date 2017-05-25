@@ -10,14 +10,19 @@
 
   <body class="typo">
     <div id="firstDiv">
-    <%= iamge_tag 'headpic.jpg', id: "headPic" %>
-    <div id="blogName"><%= link_to '/', ApplicationHelper::BlogName %></a></div>
-    <div id="fAdd1"></div>
+    <%= image_tag 'headpic.jpg', id: "headPic" %>
+    <div id="blogName"><%= link_to ApplicationHelper::BlogName, '/' %></a></div>
+    <div id="fAdd1">
+        <div class="list">
+        <a href="https://github.com/sljeff/">Github</a>
+        <a href="mailto:kindjeff.com@gmail.com">kindjeff.com@gmail.com</a>
+        </div>
+    </div>
     <div id="fAdd2"></div>
     <div id="cat">
         <div class="categoryTitle">分类</div>
         <div class="list">
-            <% for cat in @@categories %>
+            <% for cat in ApplicationHelper::Categories %>
                 <%= link_to cat.name, category_path(cat) %>
             <% end %>
         </div>

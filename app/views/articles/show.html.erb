@@ -1,7 +1,7 @@
 <% content_for :title, get_title(@article.title) %>
 <div id="article">
     <h1 id="mainTitle"><%= @article.title %></h1>
-    <small id="authorName"><%= @article.author %></small>
+    <small id="authorName"><%= @article.author.name %></small>
     <small><%= @article.created_at %></small>
     <div id="content"><%= raw @article.html_content %></div>
 </div>

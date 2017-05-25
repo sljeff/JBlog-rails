@@ -1,7 +1,8 @@
 class CategoriesController < ApplicationController
   def show
-    category = Category.find_by slug: params[:id]
+    category = Category.find_by slug: params[:slug]
     if category.nil?
+      @title = 'Not Found'
       render template: 'articles/index', status: 404
     else
       @title = category.name

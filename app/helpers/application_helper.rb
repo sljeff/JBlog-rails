@@ -1,7 +1,7 @@
 module ApplicationHelper
   BlogName = '善良的杰夫'
 
-  @@categories = Category.all
+  Categories = Category.all
 
   def get_title(title='')
     if title.blank?

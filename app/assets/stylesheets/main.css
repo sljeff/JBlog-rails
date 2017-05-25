@@ -1,0 +1,109 @@
+::selection{
+  background: #CC3;
+  color: black;
+}
+#mainTitle::selection{
+  color: orange;
+  background: black;
+}
+#overviewTitle::selection{
+  color: orange;
+  background: black;
+}
+code::selection{
+  color: orange;
+  background: black;
+}
+a#nextPage{
+  position: absolute;
+  right: 10%;
+}
+#mainTitle{
+  color: green;
+}
+#overviewTitle{
+  color: green;
+}
+#authorName{
+  margin-right: 1em;
+}
+
+@media screen and (min-device-width: 600px){
+
+  #firstDiv{
+    float: left;
+    width: 30%;
+    text-align: center;
+  }
+  #blogName{
+    font-size: 1.6em;
+  }
+  .categoryTitle{
+    font-size: 1.2em;
+  }
+  #headPic{
+    width: 28%;
+    border-radius: 50%;
+  }
+  #blogName{
+    margin-top: 2%;
+    color: black;
+  }
+  .list a{
+    display:block;
+  }
+  #fAdd1{
+    font-size: 0.8em;
+  }
+  #lastDiv{
+    background-color: rgba(0,82,156,0.2);
+    float: left;
+    position: absolute;
+    margin-left: 30%;
+    width: 70%;
+    min-height: 768px;
+  }
+  #article{
+    margin: 10%;
+  }
+  .list a{
+    display: block;
+  }
+  .list a:last-child{
+    margin-bottom: 1em;
+  }
+  #fAdd3{
+    color:black;
+  }
+  #archives{
+    margin: 10%;
+  }
+  #lAdd1{
+    margin: 10%;
+  }
+  #lAdd2{
+    margin: 10%;
+  }
+
+}
+
+@media screen and (max-device-width: 600px){
+  #fAdd1{
+    display: none;
+  }
+  #headPic{
+    margin-top: 10px;
+    width: 28%;
+    border-radius: 50%;
+  }
+  #firstDiv{
+    text-align: center;
+  }
+  #lastDiv{
+    background-color: rgba(0,82,156,0.2);
+    padding: 5%;
+  }
+  #fAdd3{
+    display: none;
+  }
+}

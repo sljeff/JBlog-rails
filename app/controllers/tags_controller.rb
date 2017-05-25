@@ -1,8 +1,9 @@
 class TagsController < ApplicationController
   def show
-    tag = Tag.find_by slug: params[:id]
+    tag = Tag.find_by slug: params[:slug]
     if tag.nil?
-      render tempalte: 'articles/index', status: 404
+      @title = 'Not Found'
+      render template: 'articles/index', status: 404
     else
       @title = tag.name
       @articles = tag.articles.order(created_at: :desc).
@@ -15,7 +16,7 @@ class TagsController < ApplicationController
       if @articles.length == per_page
         @nextLink = tag_path(tag, pagenum: page_num + 1)
       end
-      render tempalte: 'articles/index'
+      render template: 'articles/index'
     end
   end
 
